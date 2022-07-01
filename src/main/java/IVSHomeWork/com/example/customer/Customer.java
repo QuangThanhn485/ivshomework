@@ -1,0 +1,9 @@
+package IVSHomeWork.com.example.customer;
+
+public class Customer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("this is Costomer");
+	}
+}
