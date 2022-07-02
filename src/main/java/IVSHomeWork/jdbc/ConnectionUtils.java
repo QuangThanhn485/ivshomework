@@ -37,8 +37,7 @@ public class ConnectionUtils {
         String connectionURL = "jdbc:jtds:sqlserver://" + hostName + ":143/"
                 + database + ";instance=" + sqlInstanceName;
 
-        Connection conn = DriverManager.getConnection(connectionURL
-                );
+        Connection conn = DriverManager.getConnection(connectionURL, userName,password);
         return conn;
     }
 
