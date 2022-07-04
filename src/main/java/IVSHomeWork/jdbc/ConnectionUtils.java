@@ -1,6 +1,7 @@
 package IVSHomeWork.jdbc;
 
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -13,7 +14,7 @@ public class ConnectionUtils {
         String hostName = "DESKTOP-RDB3EOL";
         String sqlInstanceName = "MSSQLSERVER";
         String database = "Motel_Room";
-        String userName = "qthanh";
+        String userName = "sa";
         String password = "quangthanh123";
 
         return getSQLServerConnection(hostName, sqlInstanceName, database,
@@ -34,10 +35,17 @@ public class ConnectionUtils {
         // Cấu trúc URL Connection dành cho SQLServer
         // Ví dụ:
         // jdbc:jtds:sqlserver://localhost:1433/simplehr;instance=SQLEXPRESS
-        String connectionURL = "jdbc:jtds:sqlserver://" + hostName + ":143/"
+        String connectionURL = "jdbc:sqlserver://" + hostName + ":1433;databaseName="
                 + database + ";instance=" + sqlInstanceName;
 
         Connection conn = DriverManager.getConnection(connectionURL, userName,password);
+        if (conn != null) {
+            DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
+            System.out.println("Driver name: " + dm.getDriverName());
+            System.out.println("Driver version: " + dm.getDriverVersion());
+            System.out.println("Product name: " + dm.getDatabaseProductName());
+            System.out.println("Product version: " + dm.getDatabaseProductVersion());
+        }
         return conn;
     }
 

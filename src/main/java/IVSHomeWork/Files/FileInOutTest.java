@@ -11,7 +11,7 @@ public class FileInOutTest {
 	static general general =new general(null);
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		final String linkFile ="E:/Java/database.txt";
+		final String linkFile ="database.txt";
 		//delete(linkFile);
 		testWriteFormFile(linkFile);
 		testReadFromFile(linkFile);
