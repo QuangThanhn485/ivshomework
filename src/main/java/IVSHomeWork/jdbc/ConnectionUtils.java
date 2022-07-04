@@ -31,7 +31,6 @@ public class ConnectionUtils {
         // Java6 tự động tìm kiếm Driver thích hợp.
         // Nếu bạn dùng Java6, thì ko cần dòng này cũng được.
         Class.forName("net.sourceforge.jtds.jdbc.Driver");
-
         // Cấu trúc URL Connection dành cho SQLServer
         // Ví dụ:
         // jdbc:jtds:sqlserver://localhost:1433/simplehr;instance=SQLEXPRESS

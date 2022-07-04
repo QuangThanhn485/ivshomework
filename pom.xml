@@ -21,7 +21,11 @@
     <jacoco.unit-tests.limit.method-complexity>5</jacoco.unit-tests.limit.method-complexity>
   </properties>
   <dependencies>
-
+<dependency>
+    <groupId>commons-codec</groupId>
+    <artifactId>commons-codec</artifactId>
+    <version>1.14</version>
+</dependency>
     <dependency>
       <groupId>com.hynnet</groupId>
       <artifactId>sqljdbc4-chs</artifactId>
